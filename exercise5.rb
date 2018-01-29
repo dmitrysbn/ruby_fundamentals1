@@ -18,19 +18,19 @@ while workout_status == "on"
 
   elsif energy_level >= 3
     puts "Would you like to walk or run?"
-    answer = gets.chomp
+    answer = gets.chomp.downcase
 
-    if answer.downcase == "run"
+    if answer == "run"
       distance_from_home += 5
       energy_level -= 3
       puts "Distance from home is #{distance_from_home}km."
 
-    elsif answer.downcase == "walk"
+    elsif answer == "walk"
       distance_from_home += 1
       energy_level += 2
       puts "Distance from home is #{distance_from_home}km."
 
-    elsif answer.downcase == "go home"
+    elsif answer == "go home"
       workout_status = "off"
       if distance_from_home >= 5
         puts "#{distance_from_home}km is a pretty good workout! See you at home."
