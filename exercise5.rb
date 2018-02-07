@@ -20,7 +20,7 @@ while workout_status == "on"
     workout_status = "off"
 
   elsif energy_level < 3
-    puts "#{(annoyance_level > 0) ? "" : "Let's take some rest and sit for a bit. "}Do you want a Clif bar or a banana?"
+    puts "#{(annoyance_level > 0) ? '' : "Let's take some rest and sit for a bit. "}Do you want a Clif bar or a banana?"
     answer = gets.chomp.downcase
 
     if answer == "banana"
@@ -49,7 +49,7 @@ while workout_status == "on"
     end
 
   elsif energy_level >= 3
-    puts "#{(annoyance_level > 0) ? "So would " : "Would "}you like to walk or run?"
+    puts "#{(annoyance_level > 0) ? 'So would' : 'Would '}you like to walk or run?"
     answer = gets.chomp.downcase
 
     if (answer == "run") && (clif_bar_recency == 0)
@@ -77,8 +77,8 @@ while workout_status == "on"
         puts "Well, alright. I guess we can try again later this week."
       end
 
-  # Case of invalid input -- annoyance_level keeps rising with each invalid input.
-  # Once it reaches 4, the program decides to end the conversation.
+    # Case of invalid input -- annoyance_level keeps rising with each invalid input.
+    # Once it reaches 4, the program decides to end the conversation.
     else
       annoyance_level += 1
       if annoyance_level == 1
